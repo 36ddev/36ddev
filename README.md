@@ -4,11 +4,11 @@ This is a dozenal software calculator. It demonstrates the potentiality for futu
 
 As as example.
 
-Group[1]   Group[2]    Group[3]    Group[4]
+Group[1]....Group[2]....Group[3]....Group[4]
 
- 1   2   3     1   2   3      1   2   3      1   2   3
+1__2__3.....1__2__3.....1__2__3.....1__2__3
  
- 1   2   3     4   5   6      7   8   9      x    e   d
+1__2__3.....4__5__6.....7__8__9.....x__e__d
 
 Number1:  2 = Group 1, Third 2.
                  
