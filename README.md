@@ -9,26 +9,34 @@ Group[1]   Group[2]    Group[3]    Group[4]
  1   2   3     4   5   6      7   8   9      x    e   d
 
 Number1:  2 = Group 1, Third 2.
-                 +
+                 
 Numbers2: 2 = Group 1, Third 2.
 
-Group 1 + 1 = 2. That's pretty self-explanatory. However, this group sum is only valid because the third sum is over 3. Anything that results in a third sum that is 3 or under, will be the group sum - 1.
+Group 1 + 1 = 2.
+
+That's pretty self-explanatory. However, this group sum is only valid because the third sum is over 3. Anything that results in a third sum that is 3 or under, will be the group sum - 1.
+
 2 + 2 = 1, as we only count in threes. So we overlap and go back to 1.
 
 So, the group sum is 2, and the third sum is 1.
 Our answer is 4.
 
 This logic works with any combination of numbers.
+
 Ex 2:
+
 3 + 5 = 8
 
 3 is group 1, third 3.
+
 5 is group 2, third 2.
 
 Group 1 + 2 = 3
+
 Third 3 + 2 = 2 (overlap/overgroup)
 
 The answer is Group 3, and drop down our 2 to find 8.
+
 The answer is 8.
 
 As you can see this is much cleaner and logical than the standard addition we have been taught. If computer ALUs applied this logic at the HARDWARE level, we would be MUCH happier buying cheaper CPUs and computers, and also have a MUCH easier time programming software.
