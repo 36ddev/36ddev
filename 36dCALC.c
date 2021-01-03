@@ -84,7 +84,7 @@
 
 int main(int argc, char *argv[]){
 	//initializers
-	int i, i2, i3, c, acnt, bcnt, hcnt, ocnt, abdif = 0, m, tn1, tn2, gn1, gn2, tsum, gsum, overd, overg, og, og1, ot, ot1;
+	int i, i2, i3, c, acnt, bcnt, hcnt, ocnt, abdif = 0, m, tn1, tn2, gn1, gn2, tsum, gsum, overd, prevod = 0, og, og1, ot, ot1;
 	char *a = (char*)malloc(sizeof(char)), *ac = (char*)malloc(sizeof(char)), *b = (char*)malloc(sizeof(char)), *bc = (char*)malloc(sizeof(char)), *output = (char*)malloc(sizeof(char)), outputc[] = {}, *num = (char*)malloc(sizeof(char));
 	char const dnum[] = {'1','2','3','4','5','6','7','8','9','x','e','d'};
 	int const group[] = {1,1,1,2,2,2,3,3,3,4,4,4}, third[] = {1,2,3,1,2,3,1,2,3,1,2,3}, nums[] = {1,2,3,4,5,6,7,8,9,10,11,12};
@@ -162,7 +162,6 @@ int main(int argc, char *argv[]){
 	//**************
 	for(m = 0; m != hcnt; m++){
 		overd = 0;
-		overg = 0;
 	//1st num loop setup
 		for(i = 0; dnum != '\0'; i++){
 			if(a[m] == dnum[i]){
@@ -197,15 +196,27 @@ int main(int argc, char *argv[]){
 	gsum = gn1 + gn2;
 	if(tsum > 3){
 		tsum = tsum - 3;
-		overg = 1;
 	}
 	else
 	if(tsum < 4){
 		gsum = gsum - 1;
 	}
+	
 	if(gsum > 4){
 		overd = 1;
 		gsum = gsum - 4;
+		if(hcnt > 1 && m < hcnt-1){
+			prevod = 1;
+			gsum = gsum - 5;
+			tsum = tsum - 1;
+			if(tsum < 1){
+				tsum = 3;
+			}
+			if(gsum < 1){
+				gsum = 4;
+				//printf("\n%d", gsum);
+			}
+		}
 	}
 	else
 	if(gsum < 1){
@@ -216,12 +227,17 @@ int main(int argc, char *argv[]){
 	for(i = 0; dnum[i] != '\0'; i++){
 		if(gsum == group[i] && tsum == third[i]){
 			output[m] = dnum[i];
+			//printf("\nyeah we got it %c", output[m]);
+			break;
+		}
+	}
 		if(a[m-1] == '0' && b[m-1] == '0'){
 			output[m-1] = dnum[1];
 		}
 		else
-		if(m == 0 && overd == 1){
-			printf("Attempting number shift overd");
+		if(hcnt == 1 && overd == 1){
+			//printf("Attempting number shift overd");
+			//printf("\n%d %d", gsum, tsum);
 			for(i2; i2 != 1;){
 				outputc[0] = '2';
 				outputc[1] = output[m];
@@ -230,19 +246,19 @@ int main(int argc, char *argv[]){
 				break;
 			}
 		}
-		
-		if(m > 0 && overd == 0) if(a[m-1] != '0' && b[m-1] != '0'){
+		else
+		if(m > 0 && overd == 0) if(prevod == 0) if(a[m-1] != '0' && b[m-1] != '0'){
+			//printf("Ok working on backtracking");
 			for(i3 = 0; dnum[i3] != '\0'; i3++){
 				if(output[m-1] == dnum[i3]){
 				output[m-1] = dnum[i3-1];
+				prevod = 0;
 				break;
 				}
 			}
 		}
-		break;
 		}
-	}
-	}
+	
 	//*********************
 	//END OF MAIN BODY LOOP
 	//*********************
