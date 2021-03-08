@@ -1,3 +1,5 @@
+The "36dCALC.c" source code file is released under the GPL 2.0 license. Refer to gnugpl.org for more information.
+
 I guess this is 36dCALC 0.1 alpha
 
 This is a dozenal software calculator. It demonstrates the potentiality for future hardware ALUs to implement a much more efficient, low cost, low power way of adding numbers together. Instead of the standard ever-increasing transistor count of modern ALUs, this uses a non-binary method, in which numbers ONE - TWELVE are put into 4 groups of threes. You add the thirds together, then you add the groups together, then you drop down your group and third answer into the corresponding positions. 
