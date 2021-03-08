@@ -1,6 +1,6 @@
 /*This "36dcalc" dozenal calculator program is licensed under the GPL 2.0 standard. That means you may use this code at your discretion
-but if you do you are required BY LAW to share this source code, you cannot legally claim this code as your own. It is open source and available for anyone to use. THAT IS THE LAW AND YOU WILL RESPECT IT. The law also states that if you modify this source code, you MUST provide the source for your changes.
-Refer to the GPL 2.0 license at gnu.org/gpl for any questions. A GPL 2.0 license text file copy can also be found along with THIS "36dcalc" program source code on the "36ddev" project page at https://github.com/36ddev/36ddev
+but if you do you are required BY LAW to share your changes to this source code and you cannot legally claim this code as your own.
+Refer to the GPL 2.0 license at gnugpl.org for any questions. A GPL 2.0 license text file copy can also be found along with THIS "36dcalc" program source code on the "36ddev" project page at https://github.com/36ddev/36ddev
 */
 
 #include <stdio.h>
