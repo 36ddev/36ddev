@@ -1,4 +1,12 @@
-The "36dCALC.c" source code file is released under the GPL 2.0 license. Refer to gnugpl.org for more information.
+The "36dCALC.c" source file as well as all other source files on this page are released under the GPL 2.0 license. Refer to gnugpl.org for more information.
+
+This READ.me file is subject to change.
+
+This repository https://github.com/36dev/36dev is for mathematical and experimental source code.
+
+Projects: (currently 1 count as of 3/7/2021)
+
+1) 36dCALC.c
 
 I guess this is 36dCALC 0.1 alpha
 
